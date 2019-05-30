@@ -1,6 +1,10 @@
 @import "../../../styles/hover.scss";
 
 .nav-btn {
+  margin-right: 24px;
+  line-height: 32px;
+  font-size: 16px;
+  color: $cyan-blue;
   @extend %hover;
   .navbar-nav & {
     color: $light-blue;

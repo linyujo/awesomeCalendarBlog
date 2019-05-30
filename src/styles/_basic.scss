@@ -1,0 +1,27 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css);
+
+*{
+    position: relative;
+    box-sizing: border-box;
+    font-family: 'Helvetica', 'Arial', 'Noto Serif TC', '黑體-繁', '微軟正黑體', 'Microsoft JhengHei', sans-serif;
+}
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    display: inline-block;
+}

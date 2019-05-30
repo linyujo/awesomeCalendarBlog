@@ -15,7 +15,11 @@ const imageStyle = (headerImage, color) => ({
 
 const CardHeader = ({ url, image, backgroundColor }) => (
   <Link to={url} href={url}>
-    <div className="wrapper" style={imageStyle(image, backgroundColor)} />
+    <div className="imageBox">
+      <div className="imageBox-inner">
+        <div className="image" style={imageStyle(image, backgroundColor)} />
+      </div>
+    </div>
   </Link>
 );
 
@@ -28,35 +32,38 @@ const Card = ({
   description,
   tags,
 }) => (
-  <div className="col-sm-12 pb-4">
-    <div className="custom-card">
-      {headerImage && (
-        <CardHeader
-          url={url}
-          image={headerImage}
-          backgroundColor={headerBackgroundColor}
-        />
-      )}
-      <div className="data">
-        <div className="content">
-          <div className="stats">
-            <span className="date">{date.split('T')[0]}</span>
-            {tags.map(name => (
-              <Tag name={name} key={name} />
-            ))}
+    <div className="col-sm-6 col-md-4">
+      <div className="pb-4">
+        <div className="custom-card">
+          {headerImage && (
+            <CardHeader
+              url={url}
+              image={headerImage}
+              backgroundColor={headerBackgroundColor}
+            />
+          )}
+          <div className="data">
+            <div className="content">
+              {/* <div className="stats">
+                <span className="date">{date.split('T')[0]}</span>
+                {tags.map(name => (
+                  <Tag name={name} key={name} />
+                ))}
+              </div> */}
+              <Link to={url} href={url}>
+                <h4 className="title">{title}</h4>
+              </Link>
+              <p>{description}</p>
+              {/* <Link to={url} href={url}>
+                ....繼續閱讀全文內容
+              </Link> */}
+              <div className="date">{date.split('T')[0]}</div>
+            </div>
           </div>
-          <Link to={url} href={url}>
-            <h4 className="title">{title}</h4>
-          </Link>
-          <p>{description}</p>
-          <Link to={url} href={url}>
-            ....繼續閱讀全文內容
-          </Link>
         </div>
       </div>
     </div>
-  </div>
-);
+  );
 
 Card.propTypes = {
   title: PropTypes.string.isRequired,

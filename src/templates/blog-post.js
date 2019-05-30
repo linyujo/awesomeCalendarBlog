@@ -61,16 +61,16 @@ class BlogPost extends Component {
     const { date, headerImage, title } = frontmatter;
 
     return (
-      <div className="row post order-2">
-        <Header
+      <div className="section-content">
+        {/* <Header
           img={headerImage || 'https://i.imgur.com/M795H8A.jpg'}
           title={title}
           authorName={name}
           authorImage={iconUrl}
           subTitle={parseChineseDate(date)}
-        />
-        <Sidebar />
-        <div className="col-xl-7 col-lg-6 col-md-12 col-sm-12 order-10 content">
+        /> */}
+        {/* <Sidebar /> */}
+        <div className="section-inner">
           <Content post={html} />
           <div className="m-message" style={bgWhite}>
             如果你覺得我的文章對你有幫助的話，希望可以推薦和交流一下。歡迎
@@ -89,7 +89,7 @@ class BlogPost extends Component {
           <div id="gitalk-container" />
         </div>
 
-        <ShareBox url={slug} />
+        {/* <ShareBox url={slug} /> */}
 
         <SEO
           title={title}

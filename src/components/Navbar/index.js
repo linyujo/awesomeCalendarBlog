@@ -20,46 +20,18 @@ const NavbarClass = [
 ];
 
 const Navbar = () => (
-  <nav id="m-navbar" className={`${NavbarClass.join(' ')} navbar-night`}>
-    <div className="container">
-      <button
-        type="button"
-        className="navbar-brand btn btn-default"
-        onClick={() => {
-          ReactGA.event({
-            category: 'User',
-            action: 'Click navbar logo',
-          });
-          gotoPage('/');
-        }}
-      >
-        <span className="brand-logo">Calpa</span>
-        &apos;s Blog
-      </button>
-      <button
-        className="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-      >
-        <FontAwesomeIcon icon={faBars} />
-      </button>
-      <GithubCorner url="https://github.com/calpa/gatsby-starter-calpa-blog" />
-      <div
-        className="collapse navbar-collapse flex-row-reverse"
-        id="navbarSupportedContent"
-      >
-        <ul className="navbar-nav mr-2">
-          {navbarList.map(item => (
-            <NavItem
-              url={item.href}
-              name={item.title}
-              list={item.list}
-              key={item.href}
-            />
-          ))}
-        </ul>
-      </div>
+  <nav className="container">
+    <div className="navWrapper u-paddingTop30 u-paddingBottom25">
+      <ul className="navGroup">
+        {navbarList.map(item => (
+          <NavItem
+            url={item.href}
+            name={item.title}
+            list={item.list}
+            key={item.href}
+          />
+        ))}
+      </ul>
     </div>
   </nav>
 );

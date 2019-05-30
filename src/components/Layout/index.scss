@@ -1,4 +1,5 @@
 @import "../../styles/colors.scss"; // Colors
+@import "../../styles/basic";
 // Content
 
 .fadeIn {
@@ -18,7 +19,7 @@
 
 .layout {
   // Pixiv background style
-  background-color: $bg;
+  // background-color: $bg;
 
   img {
     max-width: 100%;

@@ -5,6 +5,7 @@ import Link from 'gatsby-link';
 import Card from '../components/Card';
 import Sidebar from '../components/Sidebar';
 import ShareBox from '../components/ShareBox';
+import Headline from '../components/Headline';
 
 import './index.scss';
 
@@ -42,12 +43,17 @@ const Page = ({ pageContext, location }) => {
   return (
     <React.Fragment>
       <div
-        className="row homepage"
+        className="container homepage"
         style={{
           marginTop: 20,
         }}
       >
-        <Sidebar />
+        <div className="row">
+          {/* <Headline image={"https://cdn-images-1.medium.com/max/1000/1*fBWLyoBQ7mNgB-U01HhV_A.jpeg"} /> */}
+            {group.map(({ node }) => (
+              <Card {...node.frontmatter} key={node.fields.slug} />
+            ))}
+          {/* <Sidebar />
         <div className="col-xl-6 col-lg-7 col-md-12 col-xs-12 order-2">
           {group.map(({ node }) => (
             <Card {...node.frontmatter} key={node.fields.slug} />
@@ -68,9 +74,10 @@ const Page = ({ pageContext, location }) => {
             </div>
           </div>
         </div>
-        <div className="col-xl-2 col-lg-1 order-3" />
+        <div className="col-xl-2 col-lg-1 order-3" /> */}
+        </div>
       </div>
-      <ShareBox url={location.href} hasCommentBox={false} />
+      {/* <ShareBox url={location.href} hasCommentBox={false} /> */}
     </React.Fragment>
   );
 };

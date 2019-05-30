@@ -4,6 +4,7 @@ import React from 'react';
 import Transition from '../Transition';
 import Navbar from '../Navbar';
 import Head from './Head';
+import Header from '../Header';
 import Footer from '../Footer';
 import './index.scss';
 
@@ -16,11 +17,12 @@ if (typeof window !== 'undefined') {
 const Layout = ({ children, location }) => (
   <div className="layout">
     <Head />
+    <Header />
     <Navbar location={location} />
     <Transition location={location}>
-      <div className="container-fluid">{children}</div>
+      <div>{children}</div>
     </Transition>
-    <Footer />
+    {/* {<Footer />} */}
   </div>
 );
 

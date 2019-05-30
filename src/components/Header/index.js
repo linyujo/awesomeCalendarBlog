@@ -1,72 +1,67 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from 'gatsby';
+
+import { config } from '../../../data';
+
 import './index.scss';
 
-import JueJin from '../JueJin';
-
-import { parseImgur } from '../../api/images';
-
-const Header = ({
-  img,
+const {
+  iconUrl,
   title,
-  subTitle,
-  authorImage,
-  authorName,
-  jueJinPostLink,
-  jueJinLikeIconLink,
-}) => (
-  <div className="col-12 header" style={{ padding: 0 }} id="header">
-    <div
-      className="img-container"
-      style={{
-        backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url(${img})`,
-        marginTop: -58,
-      }}
-    >
-      {title && <h1 className="u-title">{title}</h1>}
-      {subTitle && (
-        <div className="u-subtitle">
-          <div className="m-left">
-            {authorImage && (
-              <img
-                src={parseImgur(authorImage, 'small-square')}
-                className="author-image"
-                alt={authorName}
-              />
-            )}
-            <span className="author-name">{authorName}</span>
-          </div>
-          <span className="text">{subTitle}</span>
-          {jueJinPostLink &&
-            jueJinLikeIconLink && (
-              <JueJin
-                jueJinPostLink={jueJinPostLink}
-                jueJinLikeIconLink={jueJinLikeIconLink}
-              />
-            )}
-        </div>
-      )}
-    </div>
-  </div>
+  avatar,
+  githubUsername,
+  about,
+} = config;
+
+const Icon = ({ href, icon }) => (
+  <a
+    target="_blank"
+    href={href}
+    rel="external nofollow noopener noreferrer"
+    className="custom-icon"
+  >
+    <span className="fa-layers fa-fw fa-2x">
+      <FontAwesomeIcon icon={icon} />
+    </span>
+  </a>
 );
 
+const Header = ({
+
+}) => (
+    <div className="header">
+      <div className="container">
+        <div className="wrapper">
+          <div className="group_left">
+            <img className="logo" src={iconUrl} alt="Raine" />
+            <div className="title">{title}</div>
+          </div>
+          <div className="group_right">
+            <div className="iconGroup">
+              <Icon
+                href={`https://github.com/${githubUsername}`}
+                icon={['fab', 'github']}
+              />
+            </div>
+            <div>
+              <Link to={about} href={about} className="name">
+                <img className="avatar" src={avatar} alt="Raine" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
 Header.propTypes = {
-  img: PropTypes.string.isRequired,
-  title: PropTypes.string,
-  subTitle: PropTypes.string,
-  authorName: PropTypes.string,
-  authorImage: PropTypes.string,
-  jueJinPostLink: PropTypes.string,
-  jueJinLikeIconLink: PropTypes.string,
+
 };
 
 Header.defaultProps = {
-  title: '',
-  subTitle: '',
-  authorName: '',
-  authorImage: '',
-  jueJinPostLink: '',
-  jueJinLikeIconLink: '',
+
 };
 
 export default Header;

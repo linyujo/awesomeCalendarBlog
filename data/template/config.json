@@ -1,7 +1,7 @@
 {
   "url": "https://calpa.me",
   "meta": {
-    "favicon": "https://i.imgur.com/PO9Y4fT.jpg",
+    "favicon": "https://imgur.com/TcBvUgY.png",
     "keyword": "calpa, blog, JavaScript",
     "description": "Calpa 的技術博客，開發日常，以及遇到的坑",
     "theme_color": "#384f7c",
@@ -15,7 +15,7 @@
     "title": "過去三十日數據",
     "description": "過去三十日數據"
   },
-  "title": "Calpa 的技術博客",
+  "title": "Coding By Colors",
   "gitalk": {
     "repo": "calpa.github.io",
     "admin": ["calpa"],
@@ -52,21 +52,26 @@
       "title": "MacPlay"
     }
   ],
-  "iconUrl": "https://i.imgur.com/kjt2x52.jpg",
+  "iconUrl": "https://imgur.com/y3wxHWV.jpg",
+  "avatar": "https://imgur.com/GFIlgmB.jpg",
   "wordings": ["GatsbyJS, ReactJS", "全週期開發者"],
   "gaTrackId": "UA-84737574-3",
   "navbarList": [
     {
       "href": "/2018/12/24/front-end-blog-system-review-2018/",
+      "title": "css"
+    },
+    {
+      "href": "/2018/12/24/front-end-blog-system-review-2018/",
+      "title": "javascript"
+    },
+    {
+      "href": "/2018/12/24/front-end-blog-system-review-2018/",
+      "title": "活動日誌"
+    },
+    {
+      "href": "/2018/12/24/front-end-blog-system-review-2018/",
       "title": "網站數據"
-    },
-    {
-      "href": "/guestbook/",
-      "title": "留言簿"
-    },
-    {
-      "href": "/tags/",
-      "title": "Tags"
     },
     {
       "href": "/2018/05/01/about-calpa-liu/",
@@ -87,7 +92,7 @@
     }
   ],
   "zhihuUsername": "piao-xue-wu-ying",
-  "githubUsername": "calpa",
+  "githubUsername": "vikamirror",
   "maxPostsInPage": 10,
   "facebook": "calpablog"
 }

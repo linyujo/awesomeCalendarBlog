@@ -4,6 +4,8 @@ import lozad from 'lozad';
 
 import { isBrowser } from '../../api';
 
+import './index.scss';
+
 class Content extends Component {
   constructor(props) {
     super(props);
@@ -38,10 +40,13 @@ class Content extends Component {
       <div
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: post }}
-        style={{
-          padding: 30,
-          background: 'white',
-        }}
+        className="post-content"
+        // style={{
+        //   padding: 30,
+        //   background: 'white',
+        //   fontSize: 20,
+        //   lineHeight: 32,
+        // }}
       />
     );
   }
