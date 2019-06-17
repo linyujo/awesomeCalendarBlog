@@ -44,12 +44,9 @@ const Page = ({ pageContext, location }) => {
     <React.Fragment>
       <div
         className="container homepage"
-        style={{
-          marginTop: 20,
-        }}
       >
         <div className="row">
-          {/* <Headline image={"https://cdn-images-1.medium.com/max/1000/1*fBWLyoBQ7mNgB-U01HhV_A.jpeg"} /> */}
+            <Headline image={"https://cdn-images-1.medium.com/max/1000/1*fBWLyoBQ7mNgB-U01HhV_A.jpeg"} />
             {group.map(({ node }) => (
               <Card {...node.frontmatter} key={node.fields.slug} />
             ))}

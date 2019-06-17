@@ -4,6 +4,7 @@
 // Components
 import React, { Component } from 'react';
 import { graphql } from 'gatsby';
+import { DiscussionEmbed } from "disqus-react";
 
 import 'gitalk/dist/gitalk.css';
 
@@ -15,6 +16,8 @@ import Content from '../components/Content';
 import SEO from '../components/SEO';
 
 import Header from '../components/Header';
+import Image from '../components/Image';
+import SquareImage from '../components/SquareImage';
 // import TableOfContent from '../components/TableOfContent';
 import ShareBox from '../components/ShareBox';
 
@@ -38,15 +41,17 @@ class BlogPost extends Component {
   }
 
   componentDidMount() {
+    // console.log('this.data.content.edges', this.data.content);
     const { frontmatter, id: graphqlId } = this.data.content.edges[0].node;
-    const { title, id } = frontmatter;
 
-    const GitTalkInstance = new Gitalk({
-      ...gitalk,
-      title,
-      id: id || graphqlId,
-    });
-    GitTalkInstance.render('gitalk-container');
+    const { title, id, description } = frontmatter;
+
+    // const GitTalkInstance = new Gitalk({
+    //   ...gitalk,
+    //   title,
+    //   id: id || graphqlId,
+    // });
+    // GitTalkInstance.render('gitalk-container');
   }
 
   render() {
@@ -58,7 +63,13 @@ class BlogPost extends Component {
 
     const { slug } = fields;
 
-    const { date, headerImage, title } = frontmatter;
+    const { date, headerImage, title, description } = frontmatter;
+
+    const disqusShortname = "codingbycolors";
+    const disqusConfig = {
+      identifier: frontmatter.id,
+      title: frontmatter.title,
+    };
 
     return (
       <div className="section-content">
@@ -71,6 +82,15 @@ class BlogPost extends Component {
         /> */}
         {/* <Sidebar /> */}
         <div className="section-inner">
+          <div>
+            <div className="headerImage">
+              <SquareImage
+                href={headerImage || 'https://i.imgur.com/M795H8A.jpg'}
+                title={title} />
+            </div>
+            <h1>{title}</h1>
+            <h2 className="subTitle">{description}</h2>
+          </div>
           <Content post={html} />
           <div className="m-message" style={bgWhite}>
             如果你覺得我的文章對你有幫助的話，希望可以推薦和交流一下。歡迎
@@ -86,7 +106,8 @@ class BlogPost extends Component {
             。
           </div>
 
-          <div id="gitalk-container" />
+          {/* <div id="gitalk-container" /> */}
+          <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
         </div>
 
         {/* <ShareBox url={slug} /> */}
@@ -115,6 +136,7 @@ export const pageQuery = graphql`
       slug
       date
       headerImage
+      description
     }
   }
 

@@ -19,9 +19,11 @@ const NavbarClass = [
   'custom-navbar',
 ];
 
+console.log('navbarList', navbarList);
+
 const Navbar = () => (
-  <nav className="container">
-    <div className="navWrapper u-paddingTop30 u-paddingBottom25">
+  <nav className="navWrapper">
+    <div className="container">
       <ul className="navGroup">
         {navbarList.map(item => (
           <NavItem
@@ -31,6 +33,13 @@ const Navbar = () => (
             key={item.href}
           />
         ))}
+        <span className="tintSpectrum"></span>
+        <NavItem
+          url="/myCalendar"
+          name="學習月曆"
+          list={[]}
+          key="/myCalendar"
+        />
       </ul>
     </div>
   </nav>

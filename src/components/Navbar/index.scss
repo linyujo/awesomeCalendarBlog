@@ -1,8 +1,18 @@
 @import "../../styles/util";
+@import "../../styles/colors";
 
 .navWrapper{
-    border-bottom: 1px solid rgba(0,0,0,.1);
+    background: $bg-black;
 }
 .navGroup{
     display: flex;
+    padding: 10px 0;
+    .nav-btn{
+        color: $white;
+    }
+    .tintSpectrum{
+        padding-left: 22px;
+        border-left: 1px solid white;
+        height: 32px;
+    }
 }

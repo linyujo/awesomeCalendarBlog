@@ -1,7 +1,8 @@
 @import "../../styles/colors";
 
 .header {
-  background: #fefefe;
+  background: $bg-white;
+  box-shadow: 0 4px 4px 0 rgba(0,0,0,.15);
   .wrapper{
     display: flex;
     justify-content: space-between;
@@ -16,8 +17,12 @@
         height: 40px;
       }
       .title{
+        font-family: 'Architects Daughter', cursive;
         font-size: 20px;
-        font-weight: 400;
+        color: $black;
+        span{
+          font-family: 'Architects Daughter', cursive;
+        }
       }
     }
     .group_right{

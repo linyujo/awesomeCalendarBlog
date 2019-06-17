@@ -17,7 +17,8 @@ const HTML = ({
         name="viewport"
         content="width=device-width, initial-scale=1, shrink-to-fit=no"
       />
-      <link href="https://fonts.googleapis.com/css?family=Noto+Serif+TC" rel="stylesheet"/>
+      <link href="https://fonts.googleapis.com/css?family=Noto+Serif+TC" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css?family=Architects+Daughter&display=swap" rel="stylesheet" />
       {headComponents}
     </head>
     <body {...bodyAttributes}>

@@ -1,12 +1,19 @@
 $bg: #f4f4f4;
-$white: #fff;
-$gray: #bfbfbf;
+$bg-black: rgba(0, 0, 0, 1);
+$bg-white: #fff;
+
+$white: rgba(255,255,255,.85);
+$gray: rgba(0,0,0,.54);
 $blue: #0085a1;
 $san-juan: #2d4e68;
 $pink: #ff7e79;
 $bermuda: #77d7b9;
 $light-black: #404040;
-$black: #000; // Blue
+$black: rgba(0,0,0,.84);
 $cyan-blue: #8590a6;
 $light-blue: #337ab7;
 $regal-blue: #034378;
+$cornflowerblue: #6495ed;
+$table-border-gray: rgb(218, 220, 224);
+$table-title-color: #3f4345;
+

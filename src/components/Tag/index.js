@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './index.scss';
+
 const Tag = ({ name, count }) => (
   <a href={`/tag/${name}`} className="header-tag">
-    {name}
+    #{name}
     &nbsp;
     {count}
   </a>
