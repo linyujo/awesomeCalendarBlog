@@ -3,7 +3,7 @@ import BigCalendar from 'react-big-calendar';
 import moment from 'moment';
 
 import events from '../../events';
-// import dates from '../../../utils/dates';
+import dates from '../../../utils/dates';
 import CustomToolbar from './Toolbar';
 
 import 'react-big-calendar/lib/css/react-big-calendar.css';
