@@ -65,6 +65,7 @@ const FadeInOutHeader = ({ inCondition, children }) => (
 
 const Header = ({
   isScrollDown,
+  location,
 }) => (
   <FadeInOutHeader inCondition={!isScrollDown}>
     <div className="header">

@@ -28,6 +28,7 @@ class Layout extends React.Component {
     this.setState({ isScrollDown: isScrollDown });
   }
   render() {
+    const { location } = this.props;
     const { isScrollDown } = this.state;
     return (
       <div className="layout">
