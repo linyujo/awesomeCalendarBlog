@@ -7,41 +7,41 @@
     width: 100%;
     height: calc(100vh - 80px);
     min-height: max-content;
-    margin-top: 200px;
     margin: auto;
+    margin-top: 200px;
     > * {
         display: flex;
         flex-direction: column;
     }
-    :global{
-        .rbc-calendar{
-            flex: 1 1;
-            min-height: 580px;
+
+    .rbc-calendar{
+        flex: 1 1;
+        min-height: 580px;
+    }
+    .rbc-month-view{
+        border: 1px solid $table-border-gray;
+    }
+    .rbc-header{
+        padding: 6px 3px;
+        border: none;
+        color: $table-title-color;
+    }
+    .rbc-month-row{
+        height: auto;
+    }
+    .rbc-toolbar{
+        top: 25px;
+        position: fixed;
+        z-index: 1000;
+        left: 50%;
+        transform: translateX(-50%);
+        // 日/週/月選單
+        .rbc-btn-group:last-child{
+            display: none;
         }
-        .rbc-month-view{
-            border: 1px solid $table-border-gray;
-        }
-        .rbc-header{
-            padding: 6px 3px;
-            border: none;
-            color: $table-title-color;
-        }
-        .rbc-month-row{
-            height: auto;
-        }
-        .rbc-toolbar{
-            top: 25px;
-            position: fixed;
-            z-index: 1000;
-            left: 50%;
-            transform: translateX(-50%);
-            // 日/週/月選單
-            .rbc-btn-group:last-child{
-                display: none;
-            }
-            .rbc-toolbar-label{
-                flex-grow: 0;
-            }
+        .rbc-toolbar-label{
+            flex-grow: 0;
         }
     }
+    
 }

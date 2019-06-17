@@ -46,10 +46,10 @@ const Page = ({ pageContext, location }) => {
         className="container homepage"
       >
         <div className="row">
-            <Headline image={"https://cdn-images-1.medium.com/max/1000/1*fBWLyoBQ7mNgB-U01HhV_A.jpeg"} />
-            {group.map(({ node }) => (
-              <Card {...node.frontmatter} key={node.fields.slug} />
-            ))}
+          <Headline image="https://cdn-images-1.medium.com/max/1000/1*fBWLyoBQ7mNgB-U01HhV_A.jpeg" />
+          {group.map(({ node }) => (
+            <Card {...node.frontmatter} key={node.fields.slug} />
+          ))}
           {/* <Sidebar />
         <div className="col-xl-6 col-lg-7 col-md-12 col-xs-12 order-2">
           {group.map(({ node }) => (

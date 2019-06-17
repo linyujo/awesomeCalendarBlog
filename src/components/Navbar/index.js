@@ -33,7 +33,7 @@ const Navbar = () => (
             key={item.href}
           />
         ))}
-        <span className="tintSpectrum"></span>
+        <span className="tintSpectrum" />
         <NavItem
           url="/myCalendar"
           name="學習月曆"

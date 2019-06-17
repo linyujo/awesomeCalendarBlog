@@ -4,12 +4,12 @@ import MyCalendar from '../components/Calendar';
 
 const calendarPageStyle = {
   // margin: '104px auto 80px auto',
-  marginTop: 78
+  marginTop: 78,
 };
 
 const CalendarPage = props => (
   <div style={calendarPageStyle}>
-      <MyCalendar />
+    <MyCalendar />
   </div>
 );
 

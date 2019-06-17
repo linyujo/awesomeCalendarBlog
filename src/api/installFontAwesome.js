@@ -1,5 +1,7 @@
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faCircle, faChevronUp, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import {
+  faCircle, faChevronUp, faChevronLeft, faChevronRight,
+} from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope, faComment } from '@fortawesome/free-regular-svg-icons';
 import {
   faGithub,
@@ -17,9 +19,9 @@ const installFontAwesome = () => {
     faGithub,
     faZhihu,
     faFacebookF,
-	faFacebook,
-	faChevronLeft,
-	faChevronRight,
+    faFacebook,
+    faChevronLeft,
+    faChevronRight,
   );
 };
 

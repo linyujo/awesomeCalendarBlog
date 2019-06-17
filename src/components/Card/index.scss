@@ -44,6 +44,15 @@ $open-sans: "Open Sans", sans-serif; // clear-fix mixin
   //   }
   // }
 
+  .content {
+    background-color: $white;
+
+    .title {
+      color: $black;
+      font-size: 24px;
+    }
+  }
+
   .data {
     transform: translateY(0);
     transition: transform 0.3s;
@@ -84,13 +93,5 @@ $open-sans: "Open Sans", sans-serif; // clear-fix mixin
     font-size: 20px;
     color: $gray;
   }
-
-  .content {
-    background-color: $white;
-
-    .title {
-      color: $black;
-      font-size: 24px;
-    }
-  }
+  
 }

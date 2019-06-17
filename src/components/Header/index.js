@@ -43,17 +43,17 @@ const defaultStyles = {
 
 const transitionStyles = {
   entering: { transform: 'translateY(-100%)' },
-  entered: { transform: 'translateY(0)' }, // Transition to component being visible and having its position reset. 
+  entered: { transform: 'translateY(0)' }, // Transition to component being visible and having its position reset.
   exiting: { transform: 'translateY(-100%)' }, // Fade element out and slide it back up on exit.
 };
 
 const FadeInOutHeader = ({ inCondition, children }) => (
   <Transition in={inCondition} timeout={{ enter: 0, exit: 0 }}>
     {
-      (status) => (
+      status => (
         <div style={{
           ...defaultStyles,
-          ...transitionStyles[status]
+          ...transitionStyles[status],
         }}
         >
           {children}
@@ -66,41 +66,41 @@ const FadeInOutHeader = ({ inCondition, children }) => (
 const Header = ({
   isScrollDown,
 }) => (
-    <FadeInOutHeader inCondition={!isScrollDown}>
-      <div className="header">
-        <div className="container">
-          <div className="wrapper">
-            <Link to="/" href="/" className="name group_left">
-              <img className="logo" src={iconUrl} alt="Raine" />
-              <div className="title">
+  <FadeInOutHeader inCondition={!isScrollDown}>
+    <div className="header">
+      <div className="container">
+        <div className="wrapper">
+          <Link to="/" href="/" className="name group_left">
+            <img className="logo" src={iconUrl} alt="Raine" />
+            <div className="title">
                 Coding By
-                <span style={{color: '#f98686e6'}}> C</span>
-                <span style={{color: '#f3b157de'}}>O</span>
-                <span style={{color: 'yellow'}}>L</span>
-                <span style={{color: '#5fbf5fe8'}}>O</span>
-                <span style={{color: '#7272f7e6'}}>R</span>
-                <span style={{color: '#f97af9e6'}}>S</span>
-              </div>
-            </Link>
-            <div className="group_right">
-              <div className="iconGroup">
-                <Icon
-                  href={`https://github.com/${githubUsername}`}
-                  icon={['fab', 'github']}
-                />
-              </div>
-              <div>
-                <Link to={about} href={about} className="name">
-                  <img className="avatar" src={avatar} alt="Raine" />
-                </Link>
-              </div>
+              <span style={{ color: '#f98686e6' }}> C</span>
+              <span style={{ color: '#f3b157de' }}>O</span>
+              <span style={{ color: 'yellow' }}>L</span>
+              <span style={{ color: '#5fbf5fe8' }}>O</span>
+              <span style={{ color: '#7272f7e6' }}>R</span>
+              <span style={{ color: '#f97af9e6' }}>S</span>
+            </div>
+          </Link>
+          <div className="group_right">
+            <div className="iconGroup">
+              <Icon
+                href={`https://github.com/${githubUsername}`}
+                icon={['fab', 'github']}
+              />
+            </div>
+            <div>
+              <Link to={about} href={about} className="name">
+                <img className="avatar" src={avatar} alt="Raine" />
+              </Link>
             </div>
           </div>
         </div>
-        {(location.pathname !== '/myCalendar') && <Navbar location={location} />}
       </div>
-    </FadeInOutHeader>
-  );
+      {(location.pathname !== '/myCalendar') && <Navbar location={location} />}
+    </div>
+  </FadeInOutHeader>
+);
 
 Header.propTypes = {
 

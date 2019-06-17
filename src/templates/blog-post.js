@@ -4,7 +4,7 @@
 // Components
 import React, { Component } from 'react';
 import { graphql } from 'gatsby';
-import { DiscussionEmbed } from "disqus-react";
+import { DiscussionEmbed } from 'disqus-react';
 
 import 'gitalk/dist/gitalk.css';
 
@@ -63,9 +63,11 @@ class BlogPost extends Component {
 
     const { slug } = fields;
 
-    const { date, headerImage, title, description } = frontmatter;
+    const {
+      date, headerImage, title, description,
+    } = frontmatter;
 
-    const disqusShortname = "codingbycolors";
+    const disqusShortname = 'codingbycolors';
     const disqusConfig = {
       identifier: frontmatter.id,
       title: frontmatter.title,
@@ -86,7 +88,8 @@ class BlogPost extends Component {
             <div className="headerImage">
               <SquareImage
                 href={headerImage || 'https://i.imgur.com/M795H8A.jpg'}
-                title={title} />
+                title={title}
+              />
             </div>
             <h1>{title}</h1>
             <h2 className="subTitle">{description}</h2>
