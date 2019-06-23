@@ -11,6 +11,7 @@ module.exports = {
     'gatsby-plugin-sass',
     'gatsby-plugin-catch-links',
     'gatsby-plugin-webpack-bundle-analyzer',
+    'gatsby-plugin-remove-trailing-slashes',
     {
       resolve: 'gatsby-source-filesystem',
       options: {

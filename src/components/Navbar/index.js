@@ -19,7 +19,7 @@ const NavbarClass = [
   'custom-navbar',
 ];
 
-console.log('navbarList', navbarList);
+// console.log('navbarList', navbarList);
 
 const Navbar = () => (
   <nav className="navWrapper">

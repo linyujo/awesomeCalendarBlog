@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import moment from 'moment';
-import 'moment/locale/zh-tw';
+import 'moment/locale/zh-tw'
 
 import Tag from '../Tag';
 import SquareImage from '../SquareImage';
@@ -35,44 +35,43 @@ const Card = ({
   description,
   tags,
 }) => (
-  <div className="col-sm-6 col-md-4 u-paddingTop60">
-    <div className="pb-4">
-      <div className="custom-card">
-        {headerImage && (
-        <SquareImage
-          url={url}
-          image={headerImage}
-          backgroundColor={headerBackgroundColor}
-        />
-        // <CardHeader
-        //   url={url}
-        //   image={headerImage}
-        //   backgroundColor={headerBackgroundColor}
-        // />
-        )}
-        <div className="data">
-          <div className="content">
+    <div className="col-sm-6 col-md-4 u-paddingTop60">
+      <div className="pb-4">
+        <div className="custom-card">
+          {headerImage && (
+            <SquareImage
+              url={url}
+              image={headerImage}
+              backgroundColor={headerBackgroundColor} />
+            // <CardHeader
+            //   url={url}
+            //   image={headerImage}
+            //   backgroundColor={headerBackgroundColor}
+            // />
+          )}
+          <div className="data">
+            <div className="content">
 
-            <Link to={url} href={url}>
-              <h3 className="title">{title}</h3>
-            </Link>
-            <div className="stats">
-              {tags.map(name => (
-                <Tag name={name} key={name} />
-              ))}
-            </div>
-            <p className="description">{description}</p>
-            {/* <Link to={url} href={url}>
+              <Link to={url} href={url}>
+                <h3 className="title">{title}</h3>
+              </Link>
+              <div className="stats">
+                {tags.map(name => (
+                  <Tag name={name} key={name} />
+                ))}
+              </div>
+              <p className="description">{description}</p>
+              {/* <Link to={url} href={url}>
                 ....繼續閱讀全文內容
               </Link> */}
-            <div className="date">{moment(date).format('MMMM Do YYYY')}</div>
-            {/* <div className="date">{date.split('T')[0]}</div> */}
+              <div className="date">{moment(date).format('MMMM Do YYYY')}</div>
+              {/* <div className="date">{date.split('T')[0]}</div> */}
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-);
+  );
 
 Card.propTypes = {
   title: PropTypes.string.isRequired,

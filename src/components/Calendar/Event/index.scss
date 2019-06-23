@@ -1,0 +1,23 @@
+@import '../../../styles/colors';
+
+.popoverWrapper{
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    z-index: 1000;
+    .popoverHeader{
+        min-width: 177px;
+        min-height: 32px;
+        padding: 5px 16px 4px;
+        background: $table-border-gray;
+        font-size: 16px;
+        line-height: 32px;
+        color: $black;
+        font-weight: 500;
+        border-bottom: 1px solid #e8e8e8;
+    }
+    .popoverBody{
+        padding: 12px 16px;
+        min-width: 177px;
+        min-height: 32px;
+    }
+}

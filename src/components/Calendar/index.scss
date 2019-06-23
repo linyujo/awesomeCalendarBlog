@@ -8,7 +8,6 @@
     height: calc(100vh - 80px);
     min-height: max-content;
     margin: auto;
-    margin-top: 200px;
     > * {
         display: flex;
         flex-direction: column;
@@ -43,5 +42,7 @@
             flex-grow: 0;
         }
     }
-    
+    .rbc-date-cell > a{
+        pointer-events: none;
+    }
 }
