@@ -43,7 +43,9 @@ $open-sans: "Open Sans", sans-serif; // clear-fix mixin
   //     }
   //   }
   // }
-
+  a {
+    width: 100%;
+  }
   .content {
     background-color: $white;
 

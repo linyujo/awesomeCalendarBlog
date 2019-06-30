@@ -13,16 +13,14 @@ const NavItem = ({ url, name, list }) => {
     return (
       <Link
         className="nav-btn btn btn-link"
-        href={url}
+        // href={url}
         to={url}
         onClick={() => {
           ReactGA.event({
             category: 'User',
             action: `Click nav-menu: ${name}`,
           });
-          gotoPage(url);
-        }}
-      >
+        }}>
         {name}
       </Link>
     );

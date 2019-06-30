@@ -87,9 +87,8 @@ class BlogPost extends Component {
           <div>
             <div className="headerImage">
               <SquareImage
-                href={headerImage || 'https://i.imgur.com/M795H8A.jpg'}
-                title={title}
-              />
+                image={headerImage}
+                backgroundColor="#fff" />
             </div>
             <h1>{title}</h1>
             <h2 className="subTitle">{description}</h2>

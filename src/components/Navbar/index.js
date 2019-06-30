@@ -1,7 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-import ReactGA from 'react-ga';
 
 import GithubCorner from '../GithubCorner';
 
@@ -18,8 +17,6 @@ const NavbarClass = [
   'sticky-top',
   'custom-navbar',
 ];
-
-// console.log('navbarList', navbarList);
 
 const Navbar = () => (
   <nav className="navWrapper">

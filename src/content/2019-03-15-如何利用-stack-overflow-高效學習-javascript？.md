@@ -1,5 +1,5 @@
 ---
-slug: learn-javascript-through-stackoverflow
+slug: /learn-javascript-through-stackoverflow
 title: 如何利用 Stack Overflow 高效學習 JavaScript？
 date: 2019-03-15T02:38:23.251Z
 description: 帶著問題去學習，會比單純看書的效果好得多。而 Stack Overflow 網站雲集世界上不同程序員遇到的問題，我們可以透過它來高效學習技能，比如說前端工程師的技能：JavaScript。

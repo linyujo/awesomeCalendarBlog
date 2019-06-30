@@ -11,19 +11,18 @@ const imageStyle = (headerImage, color) => ({
 });
 
 const SquareImage = ({
-  url,
   image,
   backgroundColor,
-}) => (
-  <div className="squareImage">
-    <Link to={url} href={url}>
+}) => {
+  return (
+    <div className="squareImage">
       <div className="imageBox">
         <div className="imageBox-inner">
           <div className="image" style={imageStyle(image, backgroundColor)} />
         </div>
       </div>
-    </Link>
-  </div>
-);
+    </div>
+  );
+}
 
 export default SquareImage;

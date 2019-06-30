@@ -34,20 +34,17 @@ const Card = ({
   headerBackgroundColor,
   description,
   tags,
-}) => (
+}) => {
+  return (
     <div className="col-sm-6 col-md-4 u-paddingTop60">
       <div className="pb-4">
         <div className="custom-card">
           {headerImage && (
-            <SquareImage
-              url={url}
-              image={headerImage}
-              backgroundColor={headerBackgroundColor} />
-            // <CardHeader
-            //   url={url}
-            //   image={headerImage}
-            //   backgroundColor={headerBackgroundColor}
-            // />
+            <Link to={url} href={url}>
+              <SquareImage
+                image={headerImage}
+                backgroundColor={headerBackgroundColor} />
+            </Link>
           )}
           <div className="data">
             <div className="content">
@@ -72,6 +69,7 @@ const Card = ({
       </div>
     </div>
   );
+}
 
 Card.propTypes = {
   title: PropTypes.string.isRequired,
