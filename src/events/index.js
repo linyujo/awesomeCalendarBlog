@@ -4,6 +4,8 @@ const now = new Date();
 
 const tagColor = {
   sideProject: '#006622',
+  exercise: '#cc99ff',
+  study: '#0d6eff',
 };
 
 const dateFormat = 'YYYY-MM-DD';
@@ -16,6 +18,22 @@ export default [
     end: moment('2019-6-20', dateFormat),
     desc: '增加日曆事件顏色, tooltop',
     hexColor: tagColor.sideProject,
+  },
+  {
+    id: 'c638cb28-fe09-445c-9f01-54179413b525',
+    title: '運動',
+    start: moment('2019-7-1', dateFormat),
+    end: moment('2019-7-2', dateFormat),
+    desc: '運動',
+    hexColor: tagColor.exercise,
+  },
+  {
+    id: '464d389a-df7a-4e9c-a732-ff2a0a898a7b',
+    title: 'React-Redux單元測試',
+    start: moment('2019-7-2', dateFormat),
+    end: moment('2019-7-3', dateFormat),
+    desc: 'Udemy課程：使用Jest和Enzyme寫單元測試',
+    hexColor: tagColor.study,
   },
   // {
   //   id: 0,
