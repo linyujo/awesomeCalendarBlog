@@ -35,13 +35,15 @@ export default [
     desc: 'Udemy課程：使用Jest和Enzyme寫單元測試',
     hexColor: tagColor.study,
   },
-  // {
-  //   id: 0,
-  //   title: 'All Day Event very long title',
-  //   allDay: true,
-  //   start: moment('2019-6-6', dateFormat),
-  //   end: moment('2019-6-18', dateFormat),
-  // },
+  {
+    id: '16097641-2e26-4bb0-9c96-1f60e1badc71',
+    title: '運動',
+    // allDay: true,
+    start: moment('2019-8-6', dateFormat),
+    end: moment('2019-8-6', dateFormat),
+    desc: '運動',
+    hexColor: tagColor.exercise,
+  },
   // {
   //   id: 1,
   //   title: 'Long Event',

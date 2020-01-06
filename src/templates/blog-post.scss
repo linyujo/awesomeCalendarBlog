@@ -1,13 +1,14 @@
 @import "../styles/colors";
+@import "../styles/markdownCodeTheme";
 
 .section-content {
   font-size: 20px;
   line-height: 32px;
-  width: 740px;
+  width: 860px;
   padding: 0 20px;
   margin: 0 auto;
   margin-top: 128px;
-  @media screen and (max-width: 990px) {
+  @media screen and (max-widths: 990px) {
     // padding: 5px 25px;
   }
   // border-radius: 2px;
@@ -32,16 +33,29 @@
     }
 
     h1 {
-      font-weight: 400;
+      font-weight: 700;
       line-height: 48px;
+      font-size: 36px;
     }
     h2 {
-      font-weight: 400;
+      font-weight: 600;
       font-size: 30px;
-      line-height: 40px;
+      line-height: 60px;
       &.subTitle{
         color: rgba(0,0,0,.54);
       }
+    }
+    h3{
+      font-size: 24px;
+      line-height: 48px;
+    }
+    h4{
+      font-size: 20px;
+      line-height: 40px;
+    }
+
+    pre[class*="language-"]{
+      background: #fbfbfb;
     }
     // @for $i from 1 through 6 {
     //   h#{$i} {
@@ -54,23 +68,36 @@
     //   font-weight: 600;
     // }
 
-    p {
-      color: $black;
+    .token.operator{
+      background: none;
     }
 
-    blockquote {
-      max-width: 100%;
-      width: 100%;
-      word-break: break-word;
-      caret-color: rgba(255, 255, 255, 0.9);
-      // border-left: 3px solid currentcolor;
-      margin: 0; // Required
-      padding: 20px;
-      background: rgba(0,0,0,.05);
-      p {
-          margin: 0;
-      }
+    ol {
+      margin-top: 36px;
+      margin-bottom: 36px;
     }
+
+    pre{
+      border: none;
+    }
+
+    blockquote{
+      
+    }
+
+    // blockquote {
+    //   max-width: 100%;
+    //   width: 100%;
+    //   word-break: break-word;
+    //   caret-color: rgba(255, 255, 255, 0.9);
+    //   // border-left: 3px solid currentcolor;
+    //   margin: 0; // Required
+    //   padding: 20px;
+    //   background: rgba(0,0,0,.05);
+    //   p {
+    //       margin: 0;
+    //   }
+    // }
   }
 
   #gitalk-container {

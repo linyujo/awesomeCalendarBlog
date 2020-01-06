@@ -91,7 +91,7 @@ class BlogPost extends Component {
                 backgroundColor="#fff" />
             </div>
             <h1>{title}</h1>
-            <h2 className="subTitle">{description}</h2>
+           {/* <h2 className="subTitle">{description}</h2> */}
           </div>
           <Content post={html} />
           <div className="m-message" style={bgWhite}>
