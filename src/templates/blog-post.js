@@ -64,7 +64,7 @@ class BlogPost extends Component {
     const { slug } = fields;
 
     const {
-      date, headerImage, title, description,
+      date, headerImage, title, subTitle, description,
     } = frontmatter;
 
     const disqusShortname = 'codingbycolors';
@@ -135,6 +135,7 @@ export const pageQuery = graphql`
     frontmatter {
       id
       title
+      subTitle
       slug
       date
       headerImage

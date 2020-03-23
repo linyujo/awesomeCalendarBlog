@@ -109,7 +109,7 @@ const Header = ({
             </div>
           </div>
         </div>
-        {(location.pathname !== '/myCalendar') && <Navbar location={location} />}
+        {/* {(location.pathname !== '/myCalendar') && <Navbar location={location} />} */}
       </div>
     </FadeInOutHeader>
   );

@@ -2,6 +2,7 @@
 id: 20191229J
 slug: /react_component_patterns_1
 title: React共用Component的設計模式（一）
+subTitle: Compound Components
 date: 2019-12-29T1:00:00Z
 description: 工作上收到設計稿時，我習慣先和組員討論，哪些元件有可能會被重複使用？由於最近上頭同意大幅重構，在後台系統的頁面有87%元件是相似的情況下，同事組裝元件的方式也大同小異，他們希望我為主畫面設計一個Template，減少拼裝元件的時間。
 tags:

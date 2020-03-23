@@ -2,7 +2,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
 
-import Card from '../components/Card';
+import { ForwardCard, BackwardCard } from '../components/Card';
 import Sidebar from '../components/Sidebar';
 import ShareBox from '../components/ShareBox';
 import Headline from '../components/Headline';
@@ -37,18 +37,23 @@ const Page = ({ pageContext, location }) => {
     group, index, first, last, pathPrefix,
   } = pageContext;
 
+  console.log('group', group);
+
   const previousUrl = index - 1 === 1 ? '' : `/${pathPrefix}/${index - 1}`;
   const nextUrl = `/${pathPrefix}/${index + 1}`;
 
+  const latestPost = group[0];
+
   return (
-    <React.Fragment>
-      <div
-        className="container homepage"
-      >
+    <div className="homepage">
+      <div className="container">
         <div className="row">
-          {/* <Headline image="https://cdn-images-1.medium.com/max/1000/1*fBWLyoBQ7mNgB-U01HhV_A.jpeg" /> */}
-          {group.map(({ node }) => (
-            <Card {...node.frontmatter} key={node.fields.slug} />
+          <Headline {...latestPost.node.frontmatter} />
+          {group.slice(1).map(({ node }, index) => (
+            index % 3 !== 1 ?
+            <ForwardCard {...node.frontmatter} key={node.fields.slug} />
+            :
+            <BackwardCard {...node.frontmatter} key={node.fields.slug} />
           ))}
           {/* <Sidebar />
         <div className="col-xl-6 col-lg-7 col-md-12 col-xs-12 order-2">
@@ -75,7 +80,7 @@ const Page = ({ pageContext, location }) => {
         </div>
       </div>
       {/* <ShareBox url={location.href} hasCommentBox={false} /> */}
-    </React.Fragment>
+    </div>
   );
 };
 

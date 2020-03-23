@@ -1,7 +1,8 @@
 ---
 id: 20190725r
 slug: /jest_enzyme_unit_test_pure_component
-title: 用Jest和Enzyme寫React測試 1
+title: 用Jest和Enzyme寫React測試（一）
+subTitle: 不用跟Redux連接的Component
 date: 2019-07-25T12:00:00Z
 description: 先寫測試程式，然後才實作功能，是最近發起的一種程式開發思維。無論是否百分之百實行測試驅動開發(TDD)，程序猿可以從中學習到如何撰寫好的自動化測試，怎樣設計軟體可以更模組化、更容易擴充，以及設計出好用的 API 介面。
 tags:
@@ -9,7 +10,7 @@ tags:
   - Test
   - Jest
   - Enzyme
-headerImage: 'https://imgur.com/BmPects.jpg'
+headerImage: 'https://imgur.com/Q0sxl2k.jpg'
 templateKey: blog-post
 ---
 ## 測試範例

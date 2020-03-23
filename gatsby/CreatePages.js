@@ -22,6 +22,7 @@ module.exports = ({ actions, graphql }) => {
               slug
               id
               title
+              subTitle
               url: slug
               date
               tags

@@ -65,6 +65,7 @@ export const pageQuery = graphql`
             id
             url: slug
             title
+            subTitle
             date
             tags
             headerImage

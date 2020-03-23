@@ -26,52 +26,88 @@ const CardHeader = ({ url, image, backgroundColor }) => (
   </Link>
 );
 
-const Card = ({
+const CardWrapper = ({
+  direction,
+  children
+}) => (
+  <div className="col-sm-6 col-md-4 u-padding0">
+      <div className={`custom-card ${direction}`}>
+        {children}
+      </div>
+  </div>
+);
+
+const ArticleInfo = ({
+  url,
   title,
+  subTitle,
+  tags,
+  description,
   date,
+}) => (
+  <div className="artcleInfo">
+    <div className="info-wrapper">
+      <div className="content">
+        <div className="date">{moment(date).format('YY.MM.DD')}</div>
+        <Link to={url} href={url}>
+          <h3 className="title">{title}</h3>
+          <h4 className="subTitle">{subTitle}</h4>
+        </Link>
+        <div className="stats">
+          {tags.map(name => (
+            <Tag name={name} key={name} />
+          ))}
+        </div>
+        {/* <p className="description">{description}</p> */}
+       
+      </div>
+    </div>
+  </div>
+);
+
+
+const BackwardCard = ({
   url,
   headerImage,
   headerBackgroundColor,
-  description,
-  tags,
-}) => {
-  return (
-    <div className="col-sm-6 col-md-4 u-paddingTop60">
-      <div className="pb-4">
-        <div className="custom-card">
-          {headerImage && (
-            <Link to={url} href={url}>
-              <SquareImage
-                image={headerImage}
-                backgroundColor={headerBackgroundColor} />
-            </Link>
-          )}
-          <div className="data">
-            <div className="content">
+  ...props
+}) => (
+  <CardWrapper direction="backward">
+    <ArticleInfo
+      {...props}
+      url={url} />
+    {headerImage && (
+      <Link to={url} href={url}>
+        <SquareImage
+          image={headerImage}
+          backgroundColor={headerBackgroundColor} />
+      </Link>
+    )}
+    
+  </CardWrapper>
+);
 
-              <Link to={url} href={url}>
-                <h3 className="title">{title}</h3>
-              </Link>
-              <div className="stats">
-                {tags.map(name => (
-                  <Tag name={name} key={name} />
-                ))}
-              </div>
-              <p className="description">{description}</p>
-              {/* <Link to={url} href={url}>
-                ....繼續閱讀全文內容
-              </Link> */}
-              <div className="date">{moment(date).format('MMMM Do YYYY')}</div>
-              {/* <div className="date">{date.split('T')[0]}</div> */}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
+const ForwardCard = ({
+  url,
+  headerImage,
+  headerBackgroundColor,
+  ...props
+}) => (
+  <CardWrapper direction="forward">  
+    {headerImage && (
+      <Link to={url} href={url}>
+        <SquareImage
+          image={headerImage}
+          backgroundColor={headerBackgroundColor} />
+      </Link>
+    )}
+    <ArticleInfo
+      {...props}
+      url={url} />
+  </CardWrapper>
+);
 
-Card.propTypes = {
+BackwardCard.propTypes = {
   title: PropTypes.string.isRequired,
   date: PropTypes.string,
   url: PropTypes.string.isRequired,
@@ -81,13 +117,16 @@ Card.propTypes = {
   tags: PropTypes.arrayOf(PropTypes.string),
 };
 
-CardHeader.propTypes = Card.propTypes;
+// CardHeader.propTypes = Card.propTypes;
 
-Card.defaultProps = {
+BackwardCard.defaultProps = {
   headerImage: '',
   tags: [],
   date: '',
   headerBackgroundColor: '',
 };
 
-export default Card;
+export {
+  BackwardCard,
+  ForwardCard
+};

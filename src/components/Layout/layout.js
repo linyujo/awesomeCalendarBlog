@@ -32,7 +32,7 @@ class Layout extends React.Component {
     const { isScrollDown } = this.state;
     return (
       <div className="layout">
-        <Head />
+        <Head />z
         <Header location={location} isScrollDown={isScrollDown} />
         {/* <Navbar location={location} /> */}
         <Transition location={location}>
@@ -44,7 +44,7 @@ class Layout extends React.Component {
         </Transition>
         {/* {<Footer />} */}
       </div>
-    );
+    );z
   }
 }
 

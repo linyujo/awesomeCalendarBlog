@@ -83,6 +83,7 @@ export default () => (
         frontmatter {
           id
           title
+          subTitle
           url: slug
           date
           tags

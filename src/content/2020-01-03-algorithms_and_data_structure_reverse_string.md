@@ -1,7 +1,8 @@
 ---
 id: 20200103J
 slug: /algorithms_and_data_structure_reverse_string
-title: 資料結構與演算法by JS（一）文字反轉
+title: 每日資料結構與演算法by JS（一）
+subTitle: 文字反轉
 date: 2020-01-03T1:00:00Z
 description: 請完成一個function：參數為string，return該字串的倒轉。
 tags:
